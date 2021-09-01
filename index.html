@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        /* Fonts */
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+
+        * {
+            font-family: "Poppins", sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container my-2">
+        <!-- Inupt Box -->
+        <div class="d-flex">
+            <input type="text" class="form-control me-2" placeholder="Python" id="searchInput">
+            <button class="btn btn-secondary" id="search-btn">Search</button>
+        </div>
+    </section>
+    <section class="container">
+        <!-- Book Details -->
+        <div class="row">
+            <div class="col-md-7">
+                <div class="rounded overflow-hidden border p-2">
+                    <img src="https://restcountries.eu/data/umi.svg" class="w-100" alt="">
+                </div>
+            </div>
+            <div class="col-md-5">
+                <h1>Python</h1>
+                <p>Details</p>
+                <p>Details</p>
+                <p>Details</p>
+            </div>
+        </div>
+    </section>
+    <section class="container my-2">
+        <!-- Books -->
+        <div id="books-container" class="row">
+            <div class="col-md-3 col-12">
+                <!-- Image -->
+                <div class="rounded overflow-hidden border p-2">
+                    <img src="https://restcountries.eu/data/umi.svg" class="w-100" alt="">
+                </div>
+                <!-- Body -->
+                <div class="py-2 d-flex justify-content-between align-items-center d-md-block text-md-center">
+                    <h1>Python</h1>
+                    <button class="btn btn-secondary">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="main.js"></script>
+</body>
+
+</html>
