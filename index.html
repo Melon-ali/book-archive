@@ -5,61 +5,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Details</title>
+    <title>All Books</title>
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <style>
-        /* Fonts */
-        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
-
-        * {
-            font-family: "Poppins", sans-serif;
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <section class="container my-2">
-        <!-- Inupt Box -->
-        <div class="d-flex">
-            <input type="text" class="form-control me-2" placeholder="Python" id="searchInput">
-            <button class="btn btn-secondary" id="search-btn">Search</button>
-        </div>
-    </section>
-    <section class="container">
-        <!-- Book Details -->
-        <div class="row">
-            <div class="col-md-7">
-                <div class="rounded overflow-hidden border p-2">
-                    <img src="https://restcountries.eu/data/umi.svg" class="w-100" alt="">
-                </div>
+
+    <main>
+        <!-- Searce Option  -->
+        <section class="container mt-4 mb-5 w-50">
+            <h1 class="text-center text-success">Search Your Fevorite Book</h1>
+            <div class="input-group mb-3">
+                <input id="search-input" type="text" class="rounded form-control me-2 p-2" placeholder="Search Books">
+                <button onclick="searceBook()" class="btn btn-outline-secondary px-3 rounded" type="button"
+                    id="search-btn">Search</button>
             </div>
-            <div class="col-md-5">
-                <h1>Python</h1>
-                <p>Details</p>
-                <p>Details</p>
-                <p>Details</p>
-            </div>
-        </div>
-    </section>
-    <section class="container my-2">
-        <!-- Books -->
-        <div id="books-container" class="row">
-            <div class="col-md-3 col-12">
-                <!-- Image -->
-                <div class="rounded overflow-hidden border p-2">
-                    <img src="https://restcountries.eu/data/umi.svg" class="w-100" alt="">
+        </section>
+
+        <!-- Found Result  -->
+        <section id="found-counting">
+
+        </section>
+
+        <!-- One-Error  -->
+        <section id="one-error">
+            <h4 class="text-center fw-bold text-danger">Please Search Something.</h4>
+        </section>
+
+        <!--Two-Error -->
+        <section id="two-error">
+            <h4 class="text-center fw-bold text-danger">Your Searching Result are not Found.</h4>
+        </section>
+
+        <!-- Spinner  -->
+        <section>
+            <div class="d-flex justify-content-center mb-5">
+                <div id="loading-spinner" class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
                 </div>
-                <!-- Body -->
-                <div class="py-2 d-flex justify-content-between align-items-center d-md-block text-md-center">
-                    <h1>Python</h1>
-                    <button class="btn btn-secondary">Learn More</button>
-                </div>
+
             </div>
-        </div>
-    </section>
-    <script src="main.js"></script>
+        </section>
+
+        <!-- Display Books  -->
+        <section class="container">
+            <div id="displaying-books" class="row row-cols-1 row-cols-lg-4 row-cols-md-2 g-4">
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/app.js"></script>
 </body>
 
 </html>

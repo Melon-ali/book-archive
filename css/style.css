@@ -1,0 +1,14 @@
+.text,
+.span {
+  color: rgb(151, 151, 151);
+}
+.text-count {
+  color: rgb(95, 37, 37);
+}
+#one-error {
+  display: none;
+}
+
+#two-error {
+  display: none;
+}
